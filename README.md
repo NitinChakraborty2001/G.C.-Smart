@@ -38,6 +38,7 @@ Ensure you have [Node.js](https://nodejs.org/) (version 18 or higher) and [npm](
 ### Installation
 
 1. Clone the repository:
+
    ```sh
    git clone <repository-url>
    cd "G.C. Smart"
@@ -51,27 +52,41 @@ Ensure you have [Node.js](https://nodejs.org/) (version 18 or higher) and [npm](
 ### Available Scripts
 
 - **Start development server**:
+
   ```sh
   npm run dev
   ```
+
   Opens the local development server (typically at `http://localhost:3000`).
 
 - **Build for production**:
+
   ```sh
   npm run build
   ```
 
+- **Build for Vercel**:
+
+  ```sh
+  npm run build:vercel
+  ```
+
+  Builds the application targeting Vercel Serverless Functions and static output (`.vercel/output`).
+
 - **Preview production build**:
+
   ```sh
   npm run preview
   ```
 
 - **Run tests**:
+
   ```sh
   npm run test
   ```
 
 - **Lint code**:
+
   ```sh
   npm run lint
   ```
@@ -80,6 +95,19 @@ Ensure you have [Node.js](https://nodejs.org/) (version 18 or higher) and [npm](
   ```sh
   npm run format
   ```
+
+---
+
+## 🌐 Deploying to Vercel
+
+The application uses **TanStack Start** and **Nitro** which are configured for deployment on [Vercel](https://vercel.com):
+
+1. **Connect Repository**: Push your code to GitHub and import the repository into Vercel.
+2. **Framework Detection**: Vercel recognizes the framework via `vercel.json` (`tanstack-start`).
+3. **Build & Output**:
+   - On Vercel, `process.env.VERCEL` is automatically set, directing Nitro to compile using the `vercel` preset into `.vercel/output` (Build Output API v3).
+   - Server-side rendering (SSR) is automatically deployed as serverless functions with streaming and Fluid Compute.
+4. **Deploy**: Leave the default settings and click **Deploy**.
 
 ---
 

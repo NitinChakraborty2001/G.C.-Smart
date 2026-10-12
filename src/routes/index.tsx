@@ -362,7 +362,7 @@ function Index() {
             </div>
             <div className="lg:pl-12">
               <span className="inline-flex border border-primary/30 bg-background px-3 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-primary">
-                Proposed Promotional Concept
+                Proposed promotional concept
               </span>
               <h2 className="mt-6 text-4xl font-semibold leading-[0.95] text-berry md:text-6xl">
                 The Complete-Look Collection!
@@ -612,6 +612,9 @@ function Index() {
                   <div className="space-y-2">
                     <a href="tel:+919433167181" className="block text-lg font-semibold">
                       (+91) 9433167181
+                    </a>
+                    <a href="tel:+918777823100" className="block text-lg font-semibold">
+                      (+91) 8777823100
                     </a>
                   </div>
                 </div>
